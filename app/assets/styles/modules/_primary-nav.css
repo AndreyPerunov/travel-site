@@ -5,9 +5,16 @@
     padding-top: 0;
   }
 
+  &--pull-right {
+    @mixin atMedium {
+      float: right;
+    }
+  }
+
   ul {
     margin: 0;
     padding: 0;
+    @mixin clearfix;
   }
 
   li {
@@ -16,6 +23,8 @@
     padding-right: 7px;
     @mixin atMedium {
       padding-right: 20px;
+      float: left;
+      display: block;
     }
   }
 
@@ -27,21 +36,21 @@
   }
 
   a {
-    padding: 5px 8px;
-    color: #fff;
-    text-decoration: none;
+    color: #FFF;
     font-weight: 300;
+    text-decoration: none;
     display: block;
-    font-size: 0.8rem;
-    background-color: rgba($mainBlue, 0.5);
+    padding: 5px 8px;
+    font-size: .8rem;
+    background-color: rgba(47, 85, 114, .5);
 
     @mixin atMedium {
-      padding: 12px 0;
       font-size: 1rem;
+      padding: 12px 0;
       background-color: transparent;
 
-      &.is-curent-link {
-        color: #ffbb69;
+      &.is-current-link {
+        color: #fabb69;
       }
     }
   }
